@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning JavaScript</title>
+        <link rel="stylesheet" href="style.css"/>
+        <!-- <script src="main.js"></script> --> 
+    </head>
+
+    <!-- Typically onload Body -->
+    <body id = "body" onload = "showDate()">
+        <div class = "header">
+            <h1 id = "heading">Learning JavaScript</h1> 
+            <p>With Rishub Handa</p>
+        
+        </div>
+
+        <div class = "container">
+            <button onClick = "doClick()">Click Me</button>
+            <button onClick = "this.innerHTML = 'You Clicked'">Click Me Too</button>
+            <button onClick = "changeText(this)">And Me Too</button>
+        </div> 
+        <div class = "container"> 
+            <button onmouseover = "showDate()" 
+                    onmouseout = "clearDate()">Show Date </button> 
+            <h1 id = "time"></h1>
+        </div> 
+
+        <br /> 
+        <form method = "post" 
+                action = "something.php" 
+                name = "myForm"
+                onsubmit = "return validateForm()"> 
+            <div>
+                <label>First Name</label>
+                <input type = "text" 
+                        name = "firstName" 
+                        id = "firstName" />
+            </div> 
+            <br /> 
+            <div>
+                <label>Last Name</label>
+                <input type = "text" 
+                        name = "lastName" 
+                        id = "lastName" /> 
+
+            </div> 
+            <br /> 
+            <div> 
+                <label>Background</label>
+                <select onchange = "changeBackground(this)" name = "background" id = "background">
+                    <option value = "red">Red</option>
+                    <option value = "blue">Blue</option> 
+                    <option value = "green">Green</option>
+                </select>
+            </div> 
+            <br /> 
+            <input type = "submit" value = "Submit" /> 
+        </form>
+
+        <script>
+            // Number 
+            // String 
+            var number1 = 35; 
+            var number2 = 20
+            // alert(number1 + number2); 
+            // alert("I like the number twenty: " + number2);
+
+            var colors = ["red", "green", "blue"]; 
+            // alert(colors[1]); 
+            colors = new Array("red", "green", "blue"); 
+            colors[3] = "pink"; 
+            colors.push("purple"); 
+            colors.push(1234); 
+            // alert(colors.sort()); 
+            // alert(colors.reverse()); 
+
+            for (var i = 0; i < 10; i++) { 
+                console.log(i); 
+            } 
+
+            colors.forEach(function(color) {
+                console.log(color + " is a nice color. "); 
+            });    
+
+            // Conditionals are similar to Java 
+
+            // Objects 
+
+            // Object Literals: JSON Notation 
+            var person = {
+                firstName: 'Rishub', 
+                lastName: 'Handa', 
+                age: 34, 
+                siblings: ['Rhea', 'Kunal', 'Eshaan'], 
+
+                // Nested Objects 
+                address: {
+                    street: '39 Preakness Drive', 
+                    city: 'Monroe Township', 
+                    state: 'New Jersey', 
+                    zip: 08831
+                }, 
+                // Functions 
+                fullName: function() {
+                    return this.firstName + ' ' + this.lastName; 
+                }
+            }
+
+            console.log(person.fullName()); 
+            
+            // Object Constructor 
+            var apple = new Object(); 
+            apple.color = "red"; 
+            apple.shape = "round"; 
+            apple.describe = function() {
+                return "An apple is the color " + apple.color + 
+                            " and is the shape " + apple.shape + ". "; 
+            } 
+
+            console.log(apple.describe()); 
+            
+            // Constructor Pattern 
+            function Fruit(name, color, shape) {
+                this.name = name; 
+                this.color = color; 
+                this.shape = shape; 
+
+                this.describe = function() {
+                    return "A " + this.name +  
+                            " is the color " + this.color + 
+                            ", and is the shape " + this.shape + ". "; 
+                }
+            }
+
+            var watermelon = new Fruit("watermelon", "green", "round"); 
+            console.log(watermelon.describe()); 
+
+            var fruit = [watermelon,
+                         new Fruit("orange", "orange", "round"), 
+                        new Fruit("banana", "yellow", "long")]; 
+            console.log(fruit[2].describe()); 
+
+            //Event Handlers 
+            function doClick() {
+                alert('You Clicked'); 
+            }
+
+            function changeText(id) {
+                id.innerHTML = "Changed Text"; 
+                var heading = document.getElementById('heading'); 
+                heading.innerHTML = "Changed By Id"; 
+            } 
+
+            function showDate() {
+                var time = document.getElementById('time'); 
+                time.innerHTML = Date(); 
+            } 
+
+            function clearDate() {
+                var time = document.getElementById('time'); 
+                time.innerHTML = " "; 
+            } 
+
+            function id(id) { return document.getElementById(id); }
+        
+            // Forms 
+            function changeBackground(x) {
+                console.log(x.value); 
+                var body = id('body'); 
+                body.style.backgroundColor = x.value; 
+            } 
+            
+            function validateForm() {
+                var firstName = document.forms["myForm"]["firstName"].value; 
+                if(firstName == null || firstName == "" || firstName.length < 3) { 
+                    alert(" First Name is Required. First Name Must be at Least Three Characters. "); 
+                    return false; 
+                }
+            }
+
+
+        
+        
+        </script>
+
+    </body>
+</html>

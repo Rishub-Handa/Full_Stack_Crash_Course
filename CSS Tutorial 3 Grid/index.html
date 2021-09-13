@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Tutorial 3 Grid </title>
+        <style>
+
+            .wrapper {
+                display: grid; 
+                grid-template-columns: 70% 30%; 
+                
+                /* Same as grid-gap: 1em; */
+                grid-column-gap: 1em; 
+                grid-row-gap: 1em; 
+            }
+
+            .wrapper > div{
+                background: #eee; 
+                padding: 1em; 
+            }
+
+            .wrapper > div:nth-child(odd) {
+                background: #ddd; 
+            }
+
+        
+        
+        
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam non suscipit tempora ullam deleniti cum dicta eligendi ex numquam quasi praesentium, impedit vero harum voluptate unde. Beatae, minus eaque eum suscipit libero aspernatur laborum, laudantium illo incidunt voluptas obcaecati fuga doloribus a labore. Aspernatur, hic consequatur. Ipsa voluptas cum, commodi tempora blanditiis nemo nesciunt provident itaque recusandae fuga distinctio dolor accusantium quis assumenda ratione eveniet natus, possimus cumque temporibus! Esse, perspiciatis sit. Dolore magni ratione minima. Recusandae tempore voluptatibus iure?
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia enim cum eius dicta aliquam odio facere, molestiae ducimus nulla inventore fuga. Impedit et sequi ipsum culpa! Culpa tenetur iste aspernatur?
+            </div>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam non suscipit tempora ullam deleniti cum dicta eligendi ex numquam quasi praesentium, impedit vero harum voluptate unde. Beatae, minus eaque eum suscipit libero aspernatur laborum, laudantium illo incidunt voluptas obcaecati fuga doloribus a labore. Aspernatur, hic consequatur. Ipsa voluptas cum, commodi tempora blanditiis nemo nesciunt provident itaque recusandae fuga distinctio dolor accusantium quis assumenda ratione eveniet natus, possimus cumque temporibus! Esse, perspiciatis sit. Dolore magni ratione minima. Recusandae tempore voluptatibus iure?
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia enim cum eius dicta aliquam odio facere, molestiae ducimus nulla inventore fuga. Impedit et sequi ipsum culpa! Culpa tenetur iste aspernatur?
+            </div>
+        </div>
+
+    </body>
+</html>

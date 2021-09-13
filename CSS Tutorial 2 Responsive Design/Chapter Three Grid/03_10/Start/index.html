@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>03_10 Exercise - Start</title>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	
+<!-- Variable Columns 
+	<style>
+	.container {
+		display: grid;
+		grid-gap: 10px;
+		/* Using auto-fit instead of auto-fill ensures that the elements 
+			take up the entire width of the screen, even if there are not enough 
+			elements to maintain the 150px width 
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */ 
+
+		/* MinMax() */
+		grid-template-columns: 50px minmax(100px, 1fr) minmax(70px, 1fr); 
+		
+		
+		
+		justify-content: space-between; 
+
+	}
+	</style>
+--> 
+<!-- Grid Template Areas 
+	<style>
+		.container {
+			display: grid; 
+			grid-gap: 10px; 
+			grid-template-columns: repeat(3, 1fr); 
+			/* Must have the same number of names per row. 
+				Names are displayed in development tools. 
+				Begins in the first cell from the top left. 
+				Same name arrangement must form a contiguous rectangle. 
+				'.' is unnamed. */ 
+			grid-template-areas: 
+				"apple	orange" 
+				"banana	banana" 
+				".		mango"; 
+		}
+
+		.item3 {
+			grid-area: mango; 
+		}
+
+		.item11 {
+			grid-area: apple; 
+		}
+
+		.item8 {
+			grid-area: banana; 
+		}
+
+	
+	</style>
+--> 
+
+	<style>
+		.container {
+			display: grid; 
+			grid-gap: 10px; 
+
+			/* Can name lines between columns and use as reference. */
+			grid-template-columns: [sidebar-start start] 1fr [content-start] repeat(3, 1fr) [content-end] 1fr [end]; 
+			
+
+
+			/* Set the height for implicit defined rows */
+			grid-auto-rows: 1fr; 
+
+			/* Default is to create boxes from left --> right by row, but 
+				grid-auto-flow: columns; will create boxes top --> down by column. */
+
+		}
+		
+		.item3 {
+			grid-column: content-start / content-end; 
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">
+			one
+		</div>
+		<div class="item item2">
+			two
+		</div>
+		<div class="item item3">
+			three
+		</div>
+		<div class="item item4">
+			four
+		</div>
+		<div class="item item5">
+			five
+		</div>
+		<div class="item item6">
+			six
+		</div>
+		<div class="item item7">
+			seven
+		</div>
+		<div class="item item8">
+			eight
+		</div>
+		<div class="item item9">
+			nine
+		</div>
+		<div class="item item10">
+			ten
+		</div>
+		<div class="item item11">
+			eleven
+		</div>
+		<div class="item item12">
+				twelve twelve twelve twelve twelve twelve
+		</div>
+	</div>
+</body>
+</html>

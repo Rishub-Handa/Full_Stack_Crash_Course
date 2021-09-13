@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>03_01 Exercise - Start</title>
+<!-- Tutorial 1 
+	<style>
+	.container {
+		display: grid;
+		grid-template-columns: 200px 100px; 
+		grid-template-rows: 200px 50px 100px; 
+		/* Creates a margin between the cells. */
+		grid-gap: 20px 10px; /* grid-row-gap, grid-column-gap */
+
+		/* grid-template-columns: repeat(3, 1fr); */ 
+	}
+
+	.item {
+		/* Creates Margin On All Sides Within Cell, Use Grid Gap. 
+		margin: 10px; 
+		*/
+	}
+	</style>
+-->
+
+ 
+	<style>
+	.container { 
+		display: grid; 
+		grid-gap: 10px; 
+		/* Auto takes up the maximum possible width 
+		grid-template-columns: auto 100px auto; */
+
+		/* Unit fr --> fractional width 
+			Auto leaves remaining space, fr decides partition. 
+			If the fraction is too small for the content, the size of 
+			the internal content takes priority. 
+			Try this: 
+		grid-template-columns: 1fr 100px 2fr; */
+
+		/* 4 columns of 125 pixels 
+		grid-template-columns: repeat(4, 125px); */ 
+		
+		grid-template-columns: repeat(2, 70px 1fr); 
+
+		/* The undefined height is as large as needed to fit the content */
+		grid-template-rows: 2fr 1fr 3fr; 
+		height: 90vh; 
+
+	}
+	</style>
+
+
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">
+			One
+		</div>
+		<div class="item item2">
+			Two
+		</div>
+		<div class="item item3">
+			Three
+		</div>
+		<div class="item item4">
+			Four
+		</div>
+		<div class="item item5">
+			Five
+		</div>
+		<div class="item item6">
+			Six
+		</div>
+		<div class="item item7">
+			Responsive Layout
+		</div>
+		<div class="item item8">
+			Eight
+		</div>
+		<div class="item item9">
+			Nine
+		</div>
+		<div class="item item10">
+			Ten
+		</div>
+		<div class="item item11">
+			Eleven
+		</div>
+		<div class="item item12">
+			Twelve
+		</div>
+
+	</div>
+</body>
+</html>

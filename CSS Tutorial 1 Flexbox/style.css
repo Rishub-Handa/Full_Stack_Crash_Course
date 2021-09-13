@@ -1,0 +1,86 @@
+@media(min-width: 568px) {
+    .container-1 {
+        display: flex; 
+    
+        /*
+        Remove padding and shift the item towards the start, or up 
+        Remove padding and shift the item towards the end, or down 
+        Default is stretch: the boundaries of the items stretch to match the boundaries of the container 
+    
+        align-items: flex-start; 
+        align-items: flex-end;
+        align-items: center; 
+    
+        Vertical alignment 
+    
+        flex-direction: column;
+    
+        */ 
+        
+    }
+    
+    .container-2 {
+        display: flex; 
+    
+        /*
+        Default: similar to float right 
+        Similar to float left 
+        Similar to float middle 
+        
+        justify-content: flex-start; 
+        justify-content: flex-end; 
+        justify-content: center; 
+    
+        justify-content: space-around; 
+        */
+    
+        justify-content: space-between; 
+    
+    
+    
+    }
+
+}
+
+.container-3 {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+
+
+.container-1 div, .container-2 div, .container-3 div{
+    border: 1px #ccc solid; 
+    padding: 1px; 
+
+}
+
+.box-1 {
+    flex: 2; 
+    order: 2; 
+
+}
+
+.box-2 {
+    flex: 1; 
+    order: 1; 
+    
+}
+
+.box-3 {
+    flex: 1; 
+    order: 3; 
+}
+
+.container-2-box {
+    flex-basis: 25%; /* Same as width */
+}
+
+.container-3-box {
+    flex-basis: 10%; 
+}
+
+
+
+

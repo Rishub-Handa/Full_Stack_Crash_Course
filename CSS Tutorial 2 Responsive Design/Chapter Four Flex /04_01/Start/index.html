@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>04_01 Exercise - Start</title>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<style>
+		.container {
+			display: flex; 
+			min-height: 90vh; 
+
+			/* Can combine with flex-flow: row wrap; */ 
+			flex-direction: row; /* Default is row. Also row reverse, column, and column reverse. */ 
+			flex-wrap: wrap; /* Default is nowrap. Also wrap reverse. */ 
+
+			/* */
+			justify-content: flex-start; /* Similar value as grid layout. Justify is main axis. */ 
+			/* Baseline aligns the content, or the text. */ 
+			align-items: baseline; /* Similar values as grid layout. Align is cross axis. */ 
+			align-content: flex-end; /* Similar values as grid layout. Aligns the lines within the grid */ 
+		}
+
+		.item {
+			width: 100px; 
+		} 
+
+		.item5 {
+			order: -1; 
+			height: 200px; 
+			font-size: 2em; 
+		}
+
+		.item2 {
+			font-size: 3em; 
+			align-self: flex-start; 
+		}
+
+		.item1 {
+			font-size: 5em; 
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">
+			one
+		</div>
+		<div class="item item2">
+			two
+		</div>
+		<div class="item item3">
+			three
+		</div>
+		<div class="item item4">
+			four
+		</div>
+		<div class="item item5">
+			five
+		</div>
+	</div>
+</body>
+</html>

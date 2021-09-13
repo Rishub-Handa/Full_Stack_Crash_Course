@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>03_07 Exercise - Start</title>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<style>
+	.container {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(4,auto);
+		
+		/* REFER TO DOCUMENTATION FOR ALL POSSIBLE VALUES OF THE PROPERTY */
+
+		/* Property justify-content affects column arrangement within the grid space. */
+		justify-content: auto; 
+
+		/* Property align-content affects the row arrangement if the grid has a 
+			defined height with empty space remaining. */ 
+		min-height: 90vh; 
+		align-content: auto; 
+
+		/* Properties justify-items and align-items affect horizontal and vertical arrangement 
+			of content within the grid cell or the grid tracks. */ 
+		justify-items: stretch; 
+		align-items: stretch; 
+
+	}
+
+	.item2 {
+		/* Properties justify-self and align-self affect horizontal and vertical arrangement for a 
+			particular grid item, specified within the styling of the item. */
+		justify-self: stretch; 
+		align-self: stretch; 	
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">
+			one
+		</div>
+		<div class="item item2">
+			two
+		</div>
+		<div class="item item3">
+			three
+		</div>
+		<div class="item item4">
+			four
+		</div>
+		<div class="item item5">
+			five
+		</div>
+		<div class="item item6">
+			six
+		</div>
+		<div class="item item7">
+			seven
+		</div>
+		<div class="item item8">
+			eight
+		</div>
+		<div class="item item9">
+			nine
+		</div>
+		<div class="item item10">
+			ten
+		</div>
+		<div class="item item11">
+			eleven
+		</div>
+		<div class="item item12">
+			twelve
+		</div>
+	</div>
+</body>
+</html>

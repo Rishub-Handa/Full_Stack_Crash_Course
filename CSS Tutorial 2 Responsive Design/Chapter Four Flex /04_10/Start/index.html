@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>04_10 Exercise - Start</title>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<style>
+	.container {
+		display: flex;
+		min-height: 90vh;
+	}
+
+	.item3 {
+		/* Similar to the fr unit in grid. */
+		flex-grow: 1; 
+		flex-shrink: 3; 
+
+		/* flex: flex-grow flex-shrink flex-basis; */ 
+	}
+
+	.item4 {
+		flex-grow: 2; 
+	}
+
+	.item5 {
+		flex-shrink: 5; 
+	}
+
+	.item {
+		/* Default width is 150px. 
+		If the flexbox has more room, 3 and 4 grow. 
+		If it has less room, 5 shrinks. */
+		flex-basis: 150px; 
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item1">
+			one
+		</div>
+		<div class="item item2">
+			two
+		</div>
+		<div class="item item3">
+			three
+		</div>
+		<div class="item item4">
+			four
+		</div>
+		<div class="item item5">
+			five
+		</div>
+	</div>
+</body>
+</html>

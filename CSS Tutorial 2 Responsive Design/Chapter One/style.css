@@ -1,0 +1,19 @@
+/* In the box model, this helps to create intuitive div layouts */ 
+html {
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+
+/* Do this for every image. */ 
+img {
+    max-width: 100%; 
+}
+
+@media(min-width: 600px) {
+    body {
+        background-color: #00f; 
+    }
+}

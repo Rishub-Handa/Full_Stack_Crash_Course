@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Tutorial 2</title>
+        
+        <script>
+            // Anonymous Functions 
+            var a = 5/7; 
+            var b = 18/25; 
+            // Can give it arguments as well.  
+            var theBiggest = function() {
+                var result; 
+                a > b ? result = ["a", a] : result = ["b", b];  
+                console.log(result); 
+            }
+            theBiggest(); 
+
+            // Storing Anonymous Function Results in Variables 
+            // theBiggest2 is now a value, not a function 
+            // Any variables in arguments must be defined beforehand 
+            // Useful because the function is executed top down when the script is read, 
+            // Rather than waiting for the function to be externally invoked 
+            var theBiggest2 = (function(a, b) {
+                var result; 
+                a > b ? result = ["a", a] : result = ["b", b];  
+                console.log(result); 
+            })(7/9, 13/25)
+            console.log(theBiggest2); 
+            
+            // Closures 
+            // Essentially functions inside functions. 
+            // The inner function must depend on one or more variables 
+            // defined in the outer function. 
+            // Use the outer function to define the properties and specific use 
+            // of the inner function. 
+            function makeAdder(x) {
+                return function(y) {
+                    return x + y;
+                };
+            }
+
+            var add5 = makeAdder(5);
+            var add10 = makeAdder(10);
+
+            console.log(add5(2));  // 7
+            console.log(add10(2)); // 12 
+
+            // Can use closures to simulate private methods in JavaScript. 
+            // Look up examples online Mozilla. 
+
+        </script>
+
+    </head>
+
+    <body> 
+        <div id = "redBox" style = "width: 500px; height: 500px; background-color: red;">
+
+
+        </div>
+
+        <script>
+            // Document Object Model 
+            // The browser, window, and document are all objects: each with accessible properties 
+            // Window is the top level object in the Browser Object Model --> BOM 
+            // The Document object has the HTML document 
+            
+            // Selecting Objects DOM 
+            // document.getElementByID() 
+            // document.getElementByClassName() 
+            // document.getElementByTagName() 
+
+            // Efficient Methods 
+            // document.querySelector() --> First Instance Only 
+            // document.querySelectorAll() 
+            // No comma separation --> Further specifications of the same target 
+            // Comma separation --> Target additional elements 
+            // Element.innerHTML --> Information between tags 
+            // Element.outerHTML --> Information including tags 
+
+            // Adding HTML Elements 
+            // Rather than changing the innerHTML of the parent, create a node and 
+            // and add it to the DOM tree. 
+
+
+            const BODY = document.querySelector("body"); 
+            const redBox = BODY.querySelector("div#redBox"); 
+
+            var redBoxID = redBox.getAttribute("id"); 
+            var text = "The red box has id " + redBoxID; 
+            var paragraphElement = document.createElement("p"); 
+            var textNode = document.createTextNode(text); 
+            paragraphElement.appendChild(textNode); 
+            redBox.appendChild(paragraphElement); 
+            
+            // Append is simpler to use than AppendChild 
+
+        </script>
+
+    </body>
+</html>
